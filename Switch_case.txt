@@ -1,0 +1,50 @@
+Question:
+In "xyz" super market the given products and discounts 
+  pname  dis
+   nuts      10%
+   oils     5%
+   soaps  12%
+   otherprodcuts  2%
+
+if the customer chosen all products the amount is 20000 display all discount values
+note: pls prepare using  switch...case
+
+code:
+package primepro;
+
+public class Nuts {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String[] Nuts = {"oils","nutts","soaps","otherproducts"};
+			double totalamount = 20000;
+			
+			for(String Nut: Nuts) {
+				double discount = 0;
+			
+			switch(Nut) {
+			case "oils":
+				discount= totalamount/5;
+			break;
+			case "nutts":
+				discount = totalamount/10;
+			break;
+			case "soaps":
+				discount = totalamount/12;
+			break;
+			case "otherproducts":
+				discount = totalamount/2;
+			break;
+				
+			}
+			System.out.println(Nut+":"+discount);
+			}
+	}
+
+}
+
+output:
+oils:4000.0
+nutts:2000.0
+soaps:1666.6666666666667
+otherproducts:10000.0
